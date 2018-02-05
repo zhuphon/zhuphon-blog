@@ -39,4 +39,7 @@ dependencies {
     
     // mysql
     compile("mysql:mysql-connector-java:5.1.6")
+    
+    //lombok
+	compile('org.projectlombok:lombok:1.16.20')
 }

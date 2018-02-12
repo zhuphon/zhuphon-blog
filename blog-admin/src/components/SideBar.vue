@@ -13,8 +13,15 @@ export default {
                 {
                     icon: 'el-icon-location',
                     index: '1',
-                    title: '导航1',
-                    route: '/tab1'
+                    title: '文章管理',
+                    subs: [
+                        {
+                            icon: '',
+                            title: '写文章',
+                            index: '1-1',
+                            route: '/editor'
+                        }
+                    ]
                 },
                 {
                     icon: 'el-icon-menu',
@@ -28,7 +35,7 @@ export default {
                                     icon: 'el-icon-location',
                                     index: '2-1-1',
                                     title: '2-1-1',
-                                    route: '/login'
+                                    route: '/articleList'
                                 },
                                 {
                                     icon: 'el-icon-location',
@@ -79,15 +86,8 @@ export default {
 </script>
 <style>
     .el-menu-left {
-        display: block;
-        position: relative;
-        width: 15%;
-        left: 0;
-        margin-left: 0;
-        height: 100%;
-        text-align: left;
-        padding-left: 0
+        max-width: 15%;
+        overflow: auto;
+        flex: 1;
     }
 </style>
-
-

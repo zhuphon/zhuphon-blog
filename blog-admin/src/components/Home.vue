@@ -1,4 +1,6 @@
 <template>
+<div class="ddd">
+    <z-header-nav></z-header-nav>
     <main class="container">
         <z-side-bar v-show="showSideBar"></z-side-bar>
         <div class="content">
@@ -12,8 +14,10 @@
             </footer>
         </div>
     </main>
+</div>
 </template>
 <script>
+import zHeaderNav from './HeaderNav.vue'
 import zSideBar from './SideBar.vue'
 export default {
     data () {
@@ -23,6 +27,7 @@ export default {
         }
     },
     components: {
+        zHeaderNav,
         zSideBar
     },
     methods: {
@@ -33,13 +38,16 @@ export default {
 }
 </script>
 <style scoped>
-.container {
-    /* margin-top: 60px; */
+.ddd {
+    display: flex;
     width: 100%;
     height: 100%;
+    flex-direction: column;
+}
+.container {
+    flex: auto;
     display: flex;
     flex-direction: row;
-    height: 100vh;
 }
 .content {
     box-sizing: border-box;
@@ -65,8 +73,8 @@ export default {
     flex: none
 }
 .z-footer {
+    flex: none;
     text-align: center;
     margin: 20px 0;
-    flex: none;
 }
 </style>

@@ -18,67 +18,67 @@
 </div>
 </template>
 <script>
-    export default {
-        data () {
-            return {
-                loginForm: {
-                    userName: '',
-                    password: ''
-                },
-                rules: {
-                    userName: [
-                        { required: true, message: '请输入用户名', trigger: 'blur' }
-                    ],
-                    password: [
-                        { required: true, message: '请输入密码', trigger: 'blur' }
-                    ]
-                }
+export default {
+    data () {
+        return {
+            loginForm: {
+                userName: '',
+                password: ''
+            },
+            rules: {
+                userName: [
+                    { required: true, message: '请输入用户名', trigger: 'blur' }
+                ],
+                password: [
+                    { required: true, message: '请输入密码', trigger: 'blur' }
+                ]
             }
-        },
-        methods: {
-            submitForm () {
-                const that = this
-                this.$axios.post('/login', this.loginForm)
+        }
+    },
+    methods: {
+        submitForm () {
+            const that = this
+            this.$axios.post('/login', this.loginForm)
                 .then(function (response) {
                     if (response.data === true) {
-                        that.$router.push('HelloWorld')
+                        that.$router.push('home')
                     }
                 })
                 .catch(function (response) {
 
                 })
-            },
-            resetForm () {
-                this.$router.push('Home')
-            }
+        },
+        resetForm () {
+            this.$router.push('home')
         }
     }
+}
 </script>
 <style>
-    .login-wrap {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #324157;
-    }
-    .login-title {
-        position: absolute;
-        top: 50%;
-        text-align: center;
-        width: 100%;
-        margin-top: -200px;
-        font-size: 30px;
-        color: #fff
-    }
-    .login-container { 
-        position: absolute;
-        left:50%;
-        top:50%;
-        width:300px;
-        height:160px;
-        transform: translate(-50%,-50%);
-        padding:40px 60px 40px 10px;
-        border-radius: 5px;
-        background: #fff;
-    }
+.login-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #324157;
+}
+.login-title {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    margin-top: -200px;
+    font-size: 30px;
+    color: #fff
+}
+.login-container {
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:300px;
+    height:160px;
+    transform: translate(-50%,-50%);
+    padding:40px 60px 40px 10px;
+    border-radius: 5px;
+    background: #fff;
+}
 </style>

@@ -15,23 +15,17 @@
 </template>
 <style>
 .top-nav-container {
-    position: fixed;
-    height: 60px;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin: 0;
+    flex: 1;
+    max-height: 60px;
     padding: 0 50px;
-    z-index: 100;
     background: #fff;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 .top-nav {
-    /** max-width: 850px; */
-    margin: 0 auto;
-    height: 60px;
+    display: flex;
 }
 .nav-logo {
+    flex: 2;
     display: inline-block;
     padding: 10px 0;
     cursor: pointer;
@@ -51,12 +45,13 @@
     font-weight: 500;
     vertical-align: middle;
 }
-.nav-link-container {      
-    float: right;
+.nav-link-container {
+    flex: 1;
+    display: inline-flex;
     list-style-type: none;
 }
 .nav-link-item {
-    display: inline-block;
+    flex: auto;
     margin: 0.6em;
     cursor: pointer;
 }

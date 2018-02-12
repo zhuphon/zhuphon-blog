@@ -15,18 +15,21 @@ import lombok.Data;
 @Data
 public class Article {
 
-	/* 标题 */
+	/** id */
+	private String id;
+	
+	/** 标题 */
 	private String title;
 	
-	/* 内容 */
+	/** 内容 */
 	private String content;
 	
-	/* 作者 */
+	/** 作者 */
 	private String author;
 	
-	/* 时间 */
+	/** 时间 */
 	private Date createTime;
 	
-	/* 标签 */
+	/** 标签 */
 	private List<String> tags;
 }

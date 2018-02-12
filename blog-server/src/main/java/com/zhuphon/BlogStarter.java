@@ -16,8 +16,5 @@ public class BlogStarter {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BlogStarter.class, args);
-		Article a = new Article();
-		a.setTitle("title");
-		System.out.println(a.toString());
 	}
 }
